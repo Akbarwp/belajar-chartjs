@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChartJS Maxy</title>
+</head>
+
+<body>
+    <div style="width: 50%; margin: 0 25%;">
+        <canvas id="myChart"></canvas>
+    </div>
+
+    
+    <!-- ChartJS -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script>
+        const ctx = document.getElementById('myChart');
+
+        new Chart(ctx, {
+            type: 'pie',
+            data: {
+                labels: ['Marketing', 'Sales', 'Web', 'Mobile'],
+                datasets: [{
+                    label: '# of Job',
+                    data: [12, 19, 3, 5],
+                    backgroundColor: [
+                        'rgb(75,192,192)',
+                        'rgb(89,206,143)',
+                        'rgb(255,121,97)',
+                        'rgb(117,125,232)',
+                    ],
+                    hoverOffset: 10
+                }]
+            },
+        });
+    </script>
+</body>
+
+</html>

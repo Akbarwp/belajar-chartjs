@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChartJS Maxy</title>
+</head>
+
+<body>
+    <div style="width: 50%; margin: 10% 25%;">
+        <canvas id="myChart"></canvas>
+    </div>
+
+
+    <!-- ChartJS -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script>
+        const ctx = document.getElementById('myChart');
+
+        new Chart(ctx, {
+            type: 'scatter',
+            data: {
+                datasets: [{
+                    label: 'Scatter Dataset Parallelogram',
+                    data: [{
+                        x: 0,
+                        y: 0
+                    }, {
+                        x: 2,
+                        y: 10
+                    }, {
+                        x: 10,
+                        y: 10
+                    }, {
+                        x: 8,
+                        y: 0
+                    }],
+                    backgroundColor: 'rgb(255, 99, 132)'
+                }],
+            },
+            options: {
+                scales: {
+                    x: {
+                        type: 'linear',
+                        position: 'bottom'
+                    }
+                }
+            },
+        });
+    </script>
+</body>
+
+</html>
